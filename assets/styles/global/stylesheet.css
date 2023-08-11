@@ -118,7 +118,7 @@ body {
     color: white;
 
     width: 100%; height: 5vh;
-    top: 11vh;
+    top: -30vh;
     
     z-index: 901;
     transition: 0.5s ease;
@@ -129,13 +129,37 @@ body {
     top: -0.4vh; left: 50%;
     transform: translate(-50%, 0%);
 
+    opacity: 0%;
+
     font-family: "Torus Pro Bold";
     font-size: 1.8vh;
     letter-spacing: 0.06vw;
+
+    transition: 0.4s
 }
 
-nav:has(.n-opt:hover:not(#n3)) .nav-transfer-prompt {
+body[data-nav="true"] .nav-transfer-prompt {
+    top: 11vh;
+}
+
+nav:has(.n-opt:hover) .nav-transfer-prompt {
     top: 16vh;
+}
+
+nav:has(#n1:hover) #nptxt-1 {
+    opacity: 100%;
+}
+
+nav:has(#n2:hover) #nptxt-2 {
+    opacity: 100%;
+}
+
+nav:has(#n3:hover) #nptxt-3 {
+    opacity: 100%;
+}
+
+nav:has(#n4:hover) #nptxt-4 {
+    opacity: 100%;
 }
 
 #n1 {

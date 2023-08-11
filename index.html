@@ -13,7 +13,7 @@
     <body data-nav="false">
 
         <!-- Hamborger Menu -->
-        <svg onclick="this.classList.toggle('active'); toggleNav()" class="ham hamRotate ham1" viewBox="0 0 100 100" width="80">
+        <svg onclick="this.classList.toggle('active'); toggleNav()" id="hamex" class="ham hamRotate ham1" viewBox="0 0 100 100" width="80">
             <path
                   class="line top"
                   d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
@@ -29,15 +29,27 @@
         <nav>
             <div id="nav-bg">
                 <div id="nav-opt-sect">
-                    <a href="#" class="n-opt" id="n1">home</a>
-                    <a href="#" class="n-opt" id="n2">about</a>
-                    <a href="#" class="n-opt" id="n3">projects</a>
-                    <a href="#" class="n-opt" id="n4">resume</a>
+                    <a onclick="borgerToggle(); toggleNav()" href="#" class="n-opt" id="n1">home</a>
+                    <a onclick="borgerToggle(); toggleNav()" href="#" class="n-opt" id="n2">about</a>
+                    <a onclick="borgerToggle(); toggleNav()" href="#" class="n-opt" id="n3">projects</a>
+                    <a onclick="borgerToggle(); toggleNav()" href="#" class="n-opt" id="n4">resume</a>
                 </div>
             </div>
             <div class="nav-transfer-prompt">
                 <p class="nav-tp-txt" id="nptxt-1">
-                    You are being transferred to Home...
+                    You are being transferred to the Home page...
+                </p>
+
+                <p class="nav-tp-txt" id="nptxt-2">
+                    You are being transferred to the About page...
+                </p>
+
+                <p class="nav-tp-txt" id="nptxt-3">
+                    You are being transferred to the Projects page...
+                </p>
+
+                <p class="nav-tp-txt" id="nptxt-4">
+                    You are being transferred to my Resume @ resume.io...
                 </p>
             </div>
             <div id="nav-backdrop"></div>
