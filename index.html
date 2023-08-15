@@ -12,6 +12,13 @@
     </head>
     <body data-nav="false">
 
+        <!-- Logo -->
+        <a href="index.html">
+            <p id="logo">
+                dn.
+            </p>
+        </a>
+
         <!-- Hamborger Menu -->
         <svg onclick="this.classList.toggle('active'); toggleNav()" id="hamex" class="ham hamRotate ham1" viewBox="0 0 100 100" width="80">
             <path
@@ -28,29 +35,16 @@
         <!-- Nav Menu -->
         <nav>
             <div id="nav-bg">
+                <div class="nav-selector" id="ns-1"></div>
+                <div class="nav-selector" id="ns-2"></div>
+                <div class="nav-selector" id="ns-3"></div>
+                <div class="nav-selector" id="ns-4"></div>
                 <div id="nav-opt-sect">
                     <a onclick="borgerToggle(); toggleNav()" href="#" class="n-opt" id="n1">home</a>
                     <a onclick="borgerToggle(); toggleNav()" href="#" class="n-opt" id="n2">about</a>
                     <a onclick="borgerToggle(); toggleNav()" href="#" class="n-opt" id="n3">projects</a>
                     <a onclick="borgerToggle(); toggleNav()" href="#" class="n-opt" id="n4">resume</a>
                 </div>
-            </div>
-            <div class="nav-transfer-prompt">
-                <p class="nav-tp-txt" id="nptxt-1">
-                    You are being transferred to the Home page...
-                </p>
-
-                <p class="nav-tp-txt" id="nptxt-2">
-                    You are being transferred to the About page...
-                </p>
-
-                <p class="nav-tp-txt" id="nptxt-3">
-                    You are being transferred to the Projects page...
-                </p>
-
-                <p class="nav-tp-txt" id="nptxt-4">
-                    You are being transferred to my Resume @ resume.io...
-                </p>
             </div>
             <div id="nav-backdrop"></div>
         </nav>
