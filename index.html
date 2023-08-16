@@ -9,13 +9,14 @@
         <link href="assets/styles/index/stylesheet.css" rel="stylesheet" type="text/css">
         <link href="assets/styles/global/swup.css" rel="stylesheet" type="text/css">
         <script defer src="assets/scripts/global/nav.js"></script>
+        <script defer src="assets/scripts/global/vanillatilt.js"></script>
         <script defer src="assets/scripts/index/index.js"></script>
         <script defer type="module" src="assets/scripts/global/swup/swup.js"></script>
     </head>
     <body data-nav="false">
 
         <!-- Logo -->
-        <a href="index.html">
+        <a onclick="borgerToggle(); toggleNav()" href="index.html">
             <p class="menulogo" id="logo">
                 dn.
             </p>
@@ -53,7 +54,20 @@
 
         <!-- Main Content -->
         <main id="swup" class="transition-fade">
+            <h1 id="title">high-school</h1>
+            <h1 style="top: 62%;" id="title">creative designer</h1>
 
+            <p id="hero-txt"></p>
         </main>
+
+        <!-- Footer -->
+        <footer>
+            <p class="ftr-txt" id="copyright">© 2023, Dat Nguyen</p>
+
+            <div class="ftr-blobs" id="ftr-b1"></div>
+            <div class="ftr-blobs" id="ftr-b2"></div>
+            <div class="ftr-blobs" id="ftr-b3"></div>
+            <div class="ftr-blobs" id="ftr-b4"></div>
+        </footer>
     </body>
 </html>

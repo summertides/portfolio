@@ -15,6 +15,25 @@ body {
     margin: 0;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+    display: none;
+}
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+* {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+*::selection {
+    background: #bdbdbd3a; /* WebKit/Blink Browsers */
+}
+
+*::-moz-selection {
+    background: #bdbdbd3a; /* Gecko Browsers */
+}
+
 .ham {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
@@ -76,7 +95,7 @@ body {
 
     text-decoration: none;
 
-    transition: 0.8s ease;
+    transition: 1s ease;
     transition-delay: 0s;
 
     z-index: 950;
@@ -90,7 +109,8 @@ body {
     position: fixed;
     left: 5vw; top: -8vh;
 
-    color: #1f2333;
+    color: white;
+    mix-blend-mode: difference;
     font-family: "Rubik", sans-serif;
     font-size: 3vh;
     letter-spacing: 0.06vw;
@@ -100,8 +120,12 @@ body {
     transform: scale(10);
     transform-origin: top left;
 
-    transition: 0.8s ease;
+    transition: 1s ease;
     transition-delay: 0s;
+}
+
+body[data-nav="false"] .menulogo {
+    pointer-events: none;
 }
 
 #nav-backdrop {
@@ -277,4 +301,43 @@ body[data-nav="true"] #nav-backdrop {
 body[data-nav="true"] #nav-bg {
     filter: drop-shadow(0vw 0vh 20vh rgba(0, 0, 0, 0.3));
     top: 0vh;
+}
+
+footer {
+    position: absolute;
+    bottom: -80%;
+
+    width: 100%; height: 80%;
+    overflow-y: hidden;
+}
+
+.ftr-blobs {
+    position: absolute;
+    width: 100%; height: 100%;
+    bottom: 0%;
+}
+
+#ftr-b1 {
+    background: radial-gradient(at 50% 110%, rgba(199, 196, 255, 0.5) 0%, rgba(255,255,255,0) 60%);
+}
+
+#ftr-b2 {
+    background: radial-gradient(at 80% 110%, rgba(250, 192, 255, 0.5) 0%, rgba(255,255,255,0) 50%);
+}
+
+#ftr-b3 {
+    background: radial-gradient(at 20% 110%, rgba(172, 245, 250, 0.5) 0%, rgba(255,255,255,0) 50%);
+}
+
+.ftr-txt {
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5vh;
+}
+
+#copyright {
+    position: absolute;
+    bottom: 10%; right: 7%;
+    font-weight: 700;
+    z-index: 1
 }
