@@ -1,11 +1,18 @@
-const logo = document.getElementById("logo");
+const enhance = id => {
+    const element = document.getElementById(id),
+          text = element.innerText.split("");
 
-window.addEventListener("scroll", function() {
-    if (this.window.scrollY > 30) {
-        logo.classList.add("logo")
-        logo.classList.remove("menulogo")
-    } else {
-        logo.classList.add("menulogo")
-        logo.classList.remove("logo")
-    }
-})
+    element.innerText = "";
+
+    text.forEach(letter => {
+        const span = document.createElement("span");
+
+        span.className = "letter"
+
+        span.innerText = letter;
+
+        element.appendChild(span);
+    });
+}
+
+enhance("title")
